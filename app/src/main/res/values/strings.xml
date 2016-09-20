@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Deal App</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signin">Sign In</string>
+    <string name="forgotpassword">Forget Password ?</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="gender">Gender</string>
+    <string name="dob">DOB</string>
+    <string name="cnfrmpass">Confirm Password</string>
+    <string name="resgister">Register</string>
+    <string name="acceptterms">I accept Terms &amp; Conditions</string>
+    <string name="facebook_app_id">1718748571726604</string>
+    <string name="forgotpassword1">Forget Password</string>
+    <string name="validate">Validate</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchdeal">Search deal.com.lb</string>
+    <string name="valueofday">Value of the Day</string>
+    <string name="storepickup">Store Pickup</string>
+    <string name="buyget">Buy 1\nGet 1</string>
+    <string name="allcat">All Categories</string>
+    <string name="viewmore">View More</string>
+    <string name="title_activity_all_category">AllCategory</string>
+    <string name="search">Search</string>
+    <string name="mycart">My Cart</string>
+    <string name="myacnt">My Account</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="title_activity_sub_category">SubCategory</string>
+    <string name="title_activity_product_listing">ProductListing</string>
+    <string name="filter">Filter</string>
+    <string name="title_activity_product_detail">ProductDetail</string>
+    <string name="title_activity_my_wish_list">MyWishList</string>
+    <string name="remove">Remove</string>
+    <string name="title_activity_shopping_cart">ShoppingCart</string>
+    <string name="sphoppingcart">Shopping Cart</string>
+    <string name="selectallitems">Select all available items</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="enternum">Enter Number</string>
+    <string name="ok">Ok</string>
+
+</resources>
