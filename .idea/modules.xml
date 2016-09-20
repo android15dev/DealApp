@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DealApp.iml" filepath="$PROJECT_DIR$/DealApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DealApp Git.iml" filepath="$PROJECT_DIR$/DealApp Git.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
