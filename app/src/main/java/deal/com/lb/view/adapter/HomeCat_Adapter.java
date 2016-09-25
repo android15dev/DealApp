@@ -15,6 +15,7 @@ import java.util.List;
 
 import deal.com.lb.R;
 import deal.com.lb.model.homecat.Result;
+import deal.com.lb.view.activities.ProductDetail;
 import deal.com.lb.view.activities.ProductListing;
 
 /**
@@ -66,7 +67,62 @@ public class HomeCat_Adapter extends RecyclerView.Adapter<HomeCat_Adapter.HomeVi
                 act.startActivity(new Intent(act, ProductListing.class).putExtra("from", "HomeCat").putExtra("data", results.get(position)));
             }
         });
+        holder.img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem1DealId(),results.get(position).getItem1SmallTitle());
+            }
+        });
+        holder.img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem2DealId(),results.get(position).getItem2SmallTitle());
+            }
+        });
+        holder.img3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem3DealId(),results.get(position).getItem3SmallTitle());
+            }
+        });
+        holder.img4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem4DealId(),results.get(position).getItem4SmallTitle());
+            }
+        });
+        holder.txt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem1DealId(),results.get(position).getItem1SmallTitle());
+            }
+        });
+        holder.txt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem2DealId(),results.get(position).getItem2SmallTitle());
+            }
+        });
+        holder.txt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem3DealId(),results.get(position).getItem3SmallTitle());
+            }
+        });
+        holder.txt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToDealPage(results.get(position).getItem4DealId(),results.get(position).getItem4SmallTitle());
+            }
+        });
 
+    }
+
+    private void goToDealPage(String dealId, String smallTitle) {
+        deal.com.lb.model.productlist.Result data=new deal.com.lb.model.productlist.Result();
+        data.setSmallTitle(smallTitle);
+        data.setDealId(dealId);
+        act.startActivity(new Intent(act, ProductDetail.class).putExtra("data", data));
     }
 
     @Override

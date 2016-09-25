@@ -54,6 +54,7 @@ public class HomeScreen extends BaseActivity implements View.OnClickListener {
         img2 = (ImageView) findViewById(R.id.img2);
         recycler = (RecyclerView) findViewById(R.id.recycler);
         recycler.setLayoutManager(new LinearLayoutManager(activity));
+        recycler.setNestedScrollingEnabled(false);
 
         et_search = (EditText) findViewById(R.id.et_search);
 

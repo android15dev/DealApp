@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Result implements Serializable{
+public class Result implements Serializable {
 
     @SerializedName("category_id")
     @Expose
@@ -80,6 +80,75 @@ public class Result implements Serializable{
     @SerializedName("item4_small_title")
     @Expose
     private String item4SmallTitle;
+
+    @SerializedName("item1_deal_id")
+    @Expose
+    private String item1DealId;
+    @SerializedName("item2_deal_id")
+    @Expose
+    private String item2DealId;
+    @SerializedName("item3_deal_id")
+    @Expose
+    private String item3DealId;
+    @SerializedName("item4_deal_id")
+    @Expose
+    private String item4DealId;
+
+    /**
+     * @return The item1DealId
+     */
+    public String getItem1DealId() {
+        return item1DealId;
+    }
+
+    /**
+     * @param item1DealId The item1_deal_id
+     */
+    public void setItem1DealId(String item1DealId) {
+        this.item1DealId = item1DealId;
+    }
+
+    /**
+     * @return The item2DealId
+     */
+    public String getItem2DealId() {
+        return item2DealId;
+    }
+
+    /**
+     * @param item2DealId The item2_deal_id
+     */
+    public void setItem2DealId(String item2DealId) {
+        this.item2DealId = item2DealId;
+    }
+
+    /**
+     * @return The item3DealId
+     */
+    public String getItem3DealId() {
+        return item3DealId;
+    }
+
+    /**
+     * @param item3DealId The item3_deal_id
+     */
+    public void setItem3DealId(String item3DealId) {
+        this.item3DealId = item3DealId;
+    }
+
+    /**
+     * @return The item4DealId
+     */
+    public String getItem4DealId() {
+        return item4DealId;
+    }
+
+    /**
+     * @param item4DealId The item4_deal_id
+     */
+    public void setItem4DealId(String item4DealId) {
+        this.item4DealId = item4DealId;
+    }
 
     /**
      * @return The categoryId

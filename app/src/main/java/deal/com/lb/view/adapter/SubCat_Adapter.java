@@ -2,14 +2,17 @@ package deal.com.lb.view.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 import java.util.List;
 
@@ -60,12 +63,14 @@ public class SubCat_Adapter extends RecyclerView.Adapter<SubCat_Adapter.HomeView
 
         private final TextView txt;
         private final ImageView img;
+        private final ProgressBar progressBar;
 
         public HomeViewHolder(View itemView) {
             super(itemView);
 
             img = (ImageView) itemView.findViewById(R.id.img);
             txt = (TextView) itemView.findViewById(R.id.txt);
+            progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar);
         }
 
 
