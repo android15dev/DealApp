@@ -232,9 +232,9 @@ public class WebHandling {
         });
     }
 
-    public void getProductListBySubId(String id, final ProductList_Handler productList_handler) {
+    public void getProductListBySubId(String price_from, String price_to, String sortby, String id, final ProductList_Handler productList_handler, String limit) {
 
-        Call<ProductListProp> call = api.getProductListBySubId(Constants.KEY, id);
+        Call<ProductListProp> call = api.getProductListBySubId(Constants.KEY, id, limit, price_from, price_to, sortby);
 
         call.enqueue(new Callback<ProductListProp>() {
             @Override
@@ -250,9 +250,9 @@ public class WebHandling {
         });
     }
 
-    public void getProductListByCatId(String id, final ProductList_Handler productList_handler) {
+    public void getProductListByCatId(String price_from, String price_to, String sortby, String id, final ProductList_Handler productList_handler, String limit) {
 
-        Call<ProductListProp> call = api.getProductListByCatId(Constants.KEY, id);
+        Call<ProductListProp> call = api.getProductListByCatId(Constants.KEY, id, limit, price_from, price_to, sortby);
 
         call.enqueue(new Callback<ProductListProp>() {
             @Override
@@ -336,8 +336,8 @@ public class WebHandling {
         });
     }
 
-    public void getWishList(final WishList_Handler wishList_handler) {
-        Call<WishListProp> call = api.getWishList(Constants.KEY, SharedPref.getInstance().getString(SharedConstants.USER_ID));
+    public void getWishList(final WishList_Handler wishList_handler, String limit) {
+        Call<WishListProp> call = api.getWishList(Constants.KEY, SharedPref.getInstance().getString(SharedConstants.USER_ID), limit);
 
         call.enqueue(new Callback<WishListProp>() {
             @Override
@@ -387,27 +387,9 @@ public class WebHandling {
         });
     }
 
-    public void getStorePickup(final ProductList_Handler productList_handler) {
+    public void getStorePickup(String price_from, String price_to, String sortby, final ProductList_Handler productList_handler, String limit) {
 
-        Call<ProductListProp> call = api.getStorePickup(Constants.KEY, "1");
-
-        call.enqueue(new Callback<ProductListProp>() {
-            @Override
-            public void onResponse(Call<ProductListProp> call, Response<ProductListProp> response) {
-                productList_handler.onSuccess(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<ProductListProp> call, Throwable t) {
-                productList_handler.onSuccess(null);
-                t.printStackTrace();
-            }
-        });
-    }
-
-    public void getBuy1Get1(final ProductList_Handler productList_handler) {
-
-        Call<ProductListProp> call = api.getBuy1Get1(Constants.KEY, "1");
+        Call<ProductListProp> call = api.getStorePickup(Constants.KEY, "1", limit, price_from, price_to, sortby);
 
         call.enqueue(new Callback<ProductListProp>() {
             @Override
@@ -423,9 +405,9 @@ public class WebHandling {
         });
     }
 
-    public void getValueOfDay(final ProductList_Handler productList_handler) {
+    public void getBuy1Get1(String price_from, String price_to, String sortby, final ProductList_Handler productList_handler, String limit) {
 
-        Call<ProductListProp> call = api.getValueofDay(Constants.KEY, "1");
+        Call<ProductListProp> call = api.getBuy1Get1(Constants.KEY, "1", limit, price_from, price_to, sortby);
 
         call.enqueue(new Callback<ProductListProp>() {
             @Override
@@ -441,9 +423,27 @@ public class WebHandling {
         });
     }
 
-    public void getSearchResult(String key, final ProductList_Handler productList_handler) {
+    public void getValueOfDay(String price_from, String price_to, String sortby, final ProductList_Handler productList_handler, String limit) {
 
-        Call<ProductListProp> call = api.getSearchResult(Constants.KEY, key);
+        Call<ProductListProp> call = api.getValueofDay(Constants.KEY, "1", limit, price_from, price_to, sortby);
+
+        call.enqueue(new Callback<ProductListProp>() {
+            @Override
+            public void onResponse(Call<ProductListProp> call, Response<ProductListProp> response) {
+                productList_handler.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<ProductListProp> call, Throwable t) {
+                productList_handler.onSuccess(null);
+                t.printStackTrace();
+            }
+        });
+    }
+
+    public void getSearchResult(String price_from, String price_to, String sortby, String key, final ProductList_Handler productList_handler, String limit) {
+
+        Call<ProductListProp> call = api.getSearchResult(Constants.KEY, key, limit, price_from, price_to, sortby);
 
         call.enqueue(new Callback<ProductListProp>() {
             @Override

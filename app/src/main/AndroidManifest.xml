@@ -61,6 +61,10 @@
         <activity
             android:name=".view.activities.ShoppingCart"
             android:label="@string/title_activity_shopping_cart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.activities.FilterActivity"
+            android:label="@string/title_activity_filter"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -68,27 +68,33 @@ public interface API {
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getProductListBySubId(@Field("key") String key, @Field("sid") String cid);
+    Call<ProductListProp> getProductListBySubId(@Field("key") String key, @Field("sid") String cid, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getProductListByCatId(@Field("key") String key, @Field("cid") String cid);
+    Call<ProductListProp> getProductListByCatId(@Field("key") String key, @Field("cid") String cid, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getValueofDay(@Field("key") String key, @Field("vod") String vod);
+    Call<ProductListProp> getValueofDay(@Field("key") String key, @Field("vod") String vod, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getBuy1Get1(@Field("key") String key, @Field("b1g") String b1g);
+    Call<ProductListProp> getBuy1Get1(@Field("key") String key, @Field("b1g") String b1g, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getStorePickup(@Field("key") String key, @Field("store") String store);
+    Call<ProductListProp> getStorePickup(@Field("key") String key, @Field("store") String store, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("products_ws.php")
-    Call<ProductListProp> getSearchResult(@Field("key") String key, @Field("keyword") String keyword);
+    Call<ProductListProp> getSearchResult(@Field("key") String key, @Field("keyword") String keyword, @Field("search_from") String search_from
+            , @Field("price_from") String price_from, @Field("price_to") String price_to, @Field("sort_by") String sort_by);
 
     @FormUrlEncoded
     @POST("product_details_ws.php")
@@ -108,7 +114,7 @@ public interface API {
 
     @FormUrlEncoded
     @POST("wishlist_ws.php")
-    Call<WishListProp> getWishList(@Field("key") String key, @Field("uid") String uid);
+    Call<WishListProp> getWishList(@Field("key") String key, @Field("uid") String uid, @Field("search_from") String search_from);
 
     @FormUrlEncoded
     @POST("add_cart_ws.php")

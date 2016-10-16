@@ -47,5 +47,10 @@
     <string name="logout">Logout</string>
     <string name="enternum">Enter Number</string>
     <string name="ok">Ok</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="pricefrom">Price From</string>
+    <string name="priceto">Price To</string>
+    <string name="newest">Newest</string>
+    <string name="done">Done</string>
 
 </resources>
